@@ -13,17 +13,27 @@
     </video>
   </div>
 
+  <!-- Contenedor para el mensaje de publicidad -->
+  <div id="adMessage" style="display: none; margin-top: 20px; text-align: center;">
+    <p>¡Gracias por ver el video! <a id="adLink" href="#" target="_blank" style="color: blue; text-decoration: underline;">Haz clic aquí para ver más contenido.</a></p>
+  </div>
+
   <script>
     // Reemplaza 'LINK_DIRECTO_DE_ADSTERRA' con el enlace directo de Adsterra
     const adLink = "https://audiencegarret.com/vuwcdv9th?key=e53779fcb143d751d916151d78120c0c";
     const videoPlayer = document.getElementById('videoPlayer');
+    const adMessage = document.getElementById('adMessage');
+    const adLinkElement = document.getElementById('adLink');
 
     // Evento que se activa cuando el video finaliza
     videoPlayer.addEventListener('ended', () => {
-      // Redirige al enlace de publicidad
-      window.location.href = adLink;
+      // Muestra el mensaje de publicidad
+      adMessage.style.display = 'block';
+      // Asigna el enlace al elemento
+      adLinkElement.href = adLink;
     });
   </script>
 </body>
 </html>
+
 
