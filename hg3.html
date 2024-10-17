@@ -7,17 +7,23 @@
 </head>
 <body>
   <div style="max-width: 100%; overflow: hidden;">
-    <video controls style="width: 100%;">
+    <video id="videoPlayer" controls style="width: 100%;">
       <source src="https://cdn.videy.co/9TGdsArc.mp4" type="video/mp4">
       Tu navegador no soporta la reproducción de videos.
     </video>
   </div>
 
-  <!-- Enlace publicitario de Adsterra -->
-  <div style="margin-top: 20px; text-align: center;">
-    <a href="https://audiencegarret.com/vuwcdv9th?key=e53779fcb143d751d916151d78120c0c" target="_blank" style="display: inline-block; padding: 10px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">
-      ¡Visita nuestro patrocinador!
-    </a>
-  </div>
+  <script>
+    // Reemplaza 'LINK_DIRECTO_DE_ADSTERRA' con el enlace directo de Adsterra
+    const adLink = "https://audiencegarret.com/vuwcdv9th?key=e53779fcb143d751d916151d78120c0c";
+    const videoPlayer = document.getElementById('videoPlayer');
+
+    // Evento que se activa cuando el video finaliza
+    videoPlayer.addEventListener('ended', () => {
+      // Redirige al enlace de publicidad
+      window.location.href = adLink;
+    });
+  </script>
 </body>
 </html>
+
